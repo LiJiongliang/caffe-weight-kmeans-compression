@@ -1,8 +1,10 @@
+import sys
+sys.path.append("/home/jiongliang.li/caffe/python")
 import caffe
 import os
 import pickle
 import struct
-import sys
+#import sys
 import numpy as np
 
 sys.dont_write_bytecode = True
@@ -40,7 +42,7 @@ def prune_dense(weight_arr, name="None", thresh=0.005, **kwargs):
 
 
 # How many percentages you want to apply pruning
-ratio = {"fc6": 0.91, "fc7": 0.91, "fc8": 0.75}
+ratio = {"fc6": 0.8, "fc7": 0.5, "fc8": 0.2}
 
 for idx, layer in enumerate(ratio):
     # print "layer name: ", i.name
